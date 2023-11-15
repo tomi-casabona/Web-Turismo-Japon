@@ -1,26 +1,20 @@
 *{box-sizing: border-box;}
 
-.header{   
+.header{
+    font-size:x-large;   
     display:grid;   
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    height: 15em;
+    height: 20em;
     background-size:cover;
     background-image: url("./Images/header.jpg");
     background-size: 170%;
     background-position-y: 53%;
     background-position-x: 50%;   
-    margin: 0.3em;
     border-radius:5px;
+    margin-bottom: 1em;
 }
 
-.header-div{
-    grid-row:7/9;
-    grid-column:2/3;
-    text-align:center;
-    background-color: rgba(172, 177, 182, 0.3);
-    border-radius: 5px;
-}
 
 .navbar{
     display: grid;
@@ -57,12 +51,22 @@
   }
 
   .img-nav {
-     width:2em; 
+     width:3em; 
      align-items: baseline;
   }  
-
+  
+  .header-div{
+      font-size:x-large; 
+      grid-row:7/10;
+      grid-column:2/3;
+      text-align:center;
+      background-color: rgba(172, 177, 182, 0.3);
+      border-radius: 5px;
+  }
+  
 .text-header{   
-    margin-top: 0.8em;
+    margin-top: 1em;
+    font-size: xx-large;
     font-style: italic;
     font-weight: bold;
     font-stretch: expanded;
@@ -90,76 +94,107 @@
 }
 
 .fa-twitter{
-    width:2em;
+    width:3em;
     text-align: center;
     }
 
 .fa-facebook-f{
-    width:2em;
+    width:3em;
     text-align: center;
 }
 
 main{
     display: flex;
+    font-size:x-large; 
+    background-color: rgb(229, 229, 235);
+
 }
 
 .containergeneral{
     display:flex;
+    background-color: rgb(229, 229, 235);
+
 }
 
 .container1{
-    background-color: rgb(230, 229, 237);
+    background-color: rgb(229, 229, 235);
+    flex: 0 0 80%;    
     display:flex;       
     margin: 0.3em;
     flex-wrap: wrap;
     flex-direction: column;
-    border-radius:5px;
+    border-radius:5px;   
 }
+
 .container2{
-    background-color: rgb(230, 229, 237);      
-    margin:0.3em;    
-    margin-left: 0;
+    flex: 0 0 calc(20% - 2.5em);;
+    background-color: rgb(238, 238, 247);  
+    margin:0.8em;   
     padding: 0.3em;
-    border-radius:5px;
+    border-radius:5px;    
 }
+
 .container3{
-    margin:0.3em;
     margin-top:0em;
     padding:0.3em;
     text-align:center;
     border-radius:5px;
-    background-color: rgb(230, 229, 237);  
-}
+    background-color: rgb(238, 238, 247);  }
 
 .scontainer1{
     display:flex;
     flex-direction: row;
-    border-radius:5px;
-    
+    border-radius:5px;  
+    background-color: rgb(229, 229, 235);
 }
+
 .scontainer2{
+    background-color: rgb(229, 229, 235);
     display:flex;
     flex-direction: row;
-    border-radius:5px;
-    
+    border-radius:5px;    
 }
+.textcolumns{
+     column-count:2;
+     height: 150px; /* Altura inicial del contenido */
+     overflow: hidden; /* Oculta el contenido que supera la altura */
+     transition: height 0.5s; /* Añade una transición suave */
+}
+
+.leerMas{
+    align-self: flex-end;
+    background-color:rgba(172, 177, 182, 0.3);
+    border: 1px solid rgb(245, 152, 109);
+    border-radius: 5px;
+    padding: 0.5em;
+       
+}
+
+:hover.leerMas{
+    border: 2px solid rgb(245, 152, 109);
+    font-weight: bold;
+}
+
 .box5{
-    background-color: rgb(246, 251, 255);
     margin:0.5em;
+    background-color: rgb(238, 238, 247);   
     padding:0.5em;
     text-align: center;
     border-radius:5px;
 }
 
-.box1, .box2, .box3, .box4{
-   background-color: rgb(246, 251, 255);
-    margin:0.5em;
-    padding:0.5em;
-    flex: 50%;
+.box1, .box2, .box3, .box4{   
+    display:flex;
+    flex-direction: column;
+    margin: 0.5em;
+    padding: 0.5em;   
     border-radius:5px;
+    flex: 0 0 calc(50% - 1em);
+    background-color: rgb(238, 238, 247);    
 }
 
 .box1 img, .box2 img, .box3 img, .box4 img {
+   
     width: 100%;   
     border-radius: 5px;  
 }
@@ -173,22 +208,18 @@ h5{
 h6{
     text-align:center;      
     }
-
-
-
     
-@media(max-width: 600px) {
- 
+@media(max-width: 600px) { 
    
-    .scontainer1, .scontainer2{
+    .container2{
         display:flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
     }    
+
         .box1, .box2, .box3, .box4 {
-      text-align:center;      
-       
+      text-align:center;   
     }  
+
     .containergeneral{
         display:block;
     }
@@ -196,21 +227,9 @@ h6{
    
 }
 
-
 @media (max-width: 450px){   
     
-    .navbar-menu {   
-        font-size: 0.8em;        
-      } 
-
-      .fa-twitter{
-        width:1em;
-        }
     
-    .fa-facebook-f{
-        width:1em;      
-    }
-      
 
     .scontainer1, .scontainer2{
         display:flex;
@@ -222,7 +241,7 @@ h6{
       text-align:center;      
        
     }
-    
+
     .containergeneral{
         display:block;
     }
